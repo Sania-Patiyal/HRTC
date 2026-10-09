@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HRTC DEALUX BUS — 90s Hindi Highway Radio</title>
+  <meta name="description" content="HRTC Deluxe Bus Driver Radio - Nostalgic 90s Hindi Highway Songs & Vintage Retro Vibe">
+  
+  <!-- Google Fonts: Vintage 90s Retro Hindi & Serif Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Outfit:wght@300;400;500;600&family=Rozha+One&family=VT323&family=Yatra+One&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Full Screen Background Video with Vintage Overlay -->
+  <div class="bg-wrapper">
+    <video autoplay loop muted playsinline class="bg-video" poster="Gemini_Generated_Image_jykelljykelljyke.png">
+      <source src="bg-video.mp4" type="video/mp4">
+    </video>
+    <div class="bg-overlay"></div>
+    <div class="retro-crt-lines"></div>
+  </div>
+
+  <!-- Main App Container -->
+  <div class="app-container">
+    
+    <!-- Top Header Navigation -->
+    <header class="top-header">
+      <!-- Live Realtime Clock (Top Left) -->
+      <div class="header-left">
+        <div class="clock-pill" id="clock-container" title="Current Highway Time">
+          <i class="far fa-clock clock-icon"></i>
+          <span id="realtime-clock">--:--:-- --</span>
+        </div>
+      </div>
+
+      <!-- Online Passengers Badge (Top Center) -->
+      <div class="header-center">
+        <div class="sawari-pill" id="sawari-pill" title="Live Online Passengers">
+          <span class="live-indicator-dot"></span>
+          <span id="sawari-count" class="sawari-number">1</span>
+          <span class="sawari-label">सवारी</span>
+        </div>
+      </div>
+
+      <!-- External Links (Top Right: Spotify & YT Music) -->
+      <div class="header-right">
+        <a href="https://spotify.com" target="_blank" rel="noopener" class="glass-btn badge-btn spotify-btn">
+          <i class="fab fa-spotify"></i>
+          <span>Spotify</span>
+        </a>
+        <a href="https://music.youtube.com" target="_blank" rel="noopener" class="glass-btn badge-btn yt-btn">
+          <i class="fab fa-youtube"></i>
+          <span>YT Music</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Center Hero Section (90s HRTC Aesthetic) -->
+    <main class="hero-section">
+      <div class="hero-content">
+        <!-- Vintage HRTC Org Badge -->
+        <div class="hrtc-org-badge">
+          <i class="fas fa-bus-alt"></i>
+          <span>HIMACHAL ROAD TRANSPORT CORPORATION</span>
+        </div>
+
+        <!-- Main HRTC Heading -->
+        <h1 class="main-bus-title">
+          <span class="hrtc-text">HRTC</span>
+        </h1>
+        
+        <!-- Subtitle & Radio Tagline -->
+        <div class="sub-header-container">
+          <div class="subtitle-badge">BUS DRIVER PLAYLIST</div>
+          <p class="radio-tagline">90S HINDI HILL STATIONS RADIO</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Compact Floating Audio Player Bar (Bottom) -->
+    <footer class="player-dock">
+      <div class="player-container">
+        
+        <!-- Left Column: Circular Album Thumbnail -->
+        <div class="player-thumb-col">
+          <div class="album-art-wrapper">
+            <div class="album-art" id="album-art">
+              <i class="fas fa-compact-disc cd-icon spinner"></i>
+            </div>
+            <div class="equalizer-waves" id="eq-waves">
+              <span class="bar bar-1"></span>
+              <span class="bar bar-2"></span>
+              <span class="bar bar-3"></span>
+              <span class="bar bar-4"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Middle Column: Title, Artist & Seekbar with Time -->
+        <div class="player-info-col">
+          <div class="track-details">
+            <h4 class="track-title" id="track-title">Loading Track...</h4>
+            <p class="track-artist" id="track-artist">90s Hindi Radio</p>
+          </div>
+
+          <!-- Progress Seek Bar -->
+          <div class="seekbar-inline-wrapper">
+            <div class="seekbar-container" id="seekbar-container">
+              <div class="seekbar-fill" id="seekbar-fill"></div>
+              <div class="seekbar-knob" id="seekbar-knob"></div>
+            </div>
+            <span class="time-display" id="time-display">0:00 / 0:00</span>
+          </div>
+        </div>
+
+        <!-- Right Column: Controls & Volume -->
+        <div class="player-controls-col">
+          <button class="ctrl-btn secondary" id="prev-btn" title="Previous Track">
+            <i class="fas fa-step-backward"></i>
+          </button>
+
+          <button class="ctrl-btn main-play-circle" id="play-pause-btn" title="Play / Pause">
+            <i class="fas fa-play" id="play-icon"></i>
+          </button>
+
+          <button class="ctrl-btn secondary" id="next-btn" title="Next Track">
+            <i class="fas fa-step-forward"></i>
+          </button>
+
+          <button class="volume-icon-btn" id="mute-btn" title="Toggle Mute">
+            <i class="fas fa-volume-up" id="vol-icon"></i>
+          </button>
+          
+          <div class="volume-slider-container">
+            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.8">
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Hidden Audio Element -->
+  <audio id="audio-element" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

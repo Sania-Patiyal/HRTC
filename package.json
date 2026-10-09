@@ -1,0 +1,16 @@
+{
+  "name": "hrtc-bus-driver-radio",
+  "version": "1.0.0",
+  "description": "HRTC 90s Hindi Highway Bus Driver Radio Web App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "music-metadata": "^7.14.0",
+    "ws": "^8.16.0"
+  }
+}
